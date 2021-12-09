@@ -17,25 +17,24 @@ try:
         elif a == b or b == c or a == c:
             print("Треугольник равобедренный")
             
+        if a ** 2 + b ** 2 == c ** 2 or c ** 2 + b ** 2 == a ** 2 or a ** 2 + c ** 2 == b ** 2:
+            print("Треугольник прямоугольный")
         else:
-            if a ** 2 + b ** 2 == c ** 2 or c ** 2 + b ** 2 == a ** 2 or a ** 2 + c ** 2 == b ** 2:
-                print("Треугольник прямоугольный")
-            else:
-                if max(a, b, c) == b:
-                    max_side = b
-                    b = a
-                    a = max_side
-                elif max(a, b, c) == c:
-                    max_side = c
-                    c = a
-                    a = max_side
+            if max(a, b, c) == b:
+                max_side = b
+                b = a
+                a = max_side
+            elif max(a, b, c) == c:
+                max_side = c
+                c = a
+                a = max_side
                     
-                cos = (b ** 2 + c ** 2 - a ** 2)//(2 * b * c)
+            cos = (b ** 2 + c ** 2 - a ** 2)//(2 * b * c)
 
-                if cos < 0:
-                    print("Треугольник тупоугольный")
-                else:
-                    print("Треугольник остроугольный")
+            if cos < 0:
+                print("Треугольник тупоугольный")
+            else:
+                print("Треугольник остроугольный")
             
 
     else:
